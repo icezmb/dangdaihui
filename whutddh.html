@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+              <html>
+                <head>
+                  <!-- Required meta tags-->
+                  <meta charset="utf-8">
+                  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+                  <meta name="apple-mobile-web-app-capable" content="yes">
+                  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+                  <!-- Your app title -->
+                  <title>党代会</title>
+                  <!-- Path to Framework7 iOS CSS theme styles-->
+               <link rel="stylesheet" href="css/weui.min.css">
+                  <link rel="stylesheet" href="css/jquery-weui.min.css">
+
+                  <!-- <link rel="stylesheet" href="css/flyer.min.css"> -->
+                  <link rel="stylesheet" href="css/framework7.ios.min.css">
+                  <!-- Path to Framework7 iOS related color styles -->
+                  <link rel="stylesheet" href="css/framework7.ios.colors.min.css">
+                  <!-- Path to your custom app styles-->
+                  <link rel="stylesheet" href="css/comm.min.css">
+                  <link rel="stylesheet" href="css/ddh.css">
+                   <link rel="stylesheet" type="text/css" href="css/reset.css" />   
+  
+                </head>
+                <body>
+                  <!-- Status bar overlay for full screen mode (PhoneGap) -->
+                  <div class="statusbar-overlay"></div>
+                  <!-- Panels overlay-->
+                  <div class="panel-overlay"></div>
+                  <!-- Left panel with reveal effect-->
+                  <div class="panel panel-left panel-reveal">
+                    <div class="content-block">
+                      <p>Left panel content goes here</p>
+                    </div>
+                  </div>
+                  <!-- Views -->
+                  <div class="views">
+                   <!-- Your main view -->
+                         <div class="view view-main">
+      <div class="pages">
+
+         <!-- 1.来电 -->
+        <div class="page" data-page="phonecall">
+          <div class="page-content">
+               <div class="mypage phonecall">
+      <audio autoplay="autoplay" class="callWaiting"><source src="audio/call_waiting.mp3" type="audio/mpeg" loop="loop"/></audio>
+      <div class="phoneHeader">
+        <div class="phoneName">武汉理工大学党代会</div>
+        <div class="phonePosition">湖北，武汉</div>
+      </div>
+      <div class="phoneMessage"></div>
+      <div class="phoneFooter"></div>
+               </div>
+          </div>
+        </div>
+
+         <!--  2.通话中 -->
+        <div class="page cached" data-page="online">
+          <div class="page-content">
+              <div class="mypage online">
+      <audio class="someonetalk"><source src="audio/someonetalk.mp3" type="audio/mpeg"/></audio>
+      <div class="phoneHeader">
+        <div class="phoneName">武汉理工大学党代会</div>
+        <div class="phoneTimecount">00:00</div>
+      </div>
+      <div class="onlineMessage"></div>
+      <div class="onlineFooter"></div>
+      <audio class="callStop"><source src="audio/call_Stop.mp3" type="audio/mpeg"/></audio>
+              </div>
+        </div>
+      </div>
+
+        <!--  3.显示有条新消息 -->
+        <div class="page cached" data-page="pagelock">
+          <div class="page-content">
+      <div class="mypage pagelock">
+      <audio class="notification"><source src="audio/notification.mp3" type="audio/mpeg"/></audio>
+      <div class="phoneHeader">
+        <div class="phoneTime">21:00</div>
+        <div class="phoneDate">09月24日 星期日</div>
+      </div>
+      <div class="lockedLine"></div>
+      <div class="pagelockMessage">
+            <sapn class="wechatIcon"><img src="images/wechat.png" style="width: 1.5rem;height: 1.5rem;"></sapn>
+            <div>微信</div>
+            <div class="plmcontent"> 武汉理工大学党代会：有事找你，快进群。</div>
+            <div class="plmfooter">点击查看</div>
+      </div>
+      <div class="lockedLine"></div>
+      <div class="pagelockFooter">
+          <span>点击解锁</span>
+          <div class="dot"></div>  
+                <div class="pulse"></div>
+            </div>
+    </div>
+        </div>
+      </div>
+
+       <!-- 4.聊天页面 -->
+       <div class="page toolbar-fixed cached" data-page="chating">
+         <div class="toolbar messagebar">
+            <div class="toolbar-inner">
+                <img src="images/sound.jpg" height="70%">&nbsp;<textarea placeholder="回复 武汉理工大学党代会" disabled=""></textarea>&nbsp;<img src="images/more.png" height="70%">
+            </div>
+          <!--   <div class="slideNextPage b_slideNextPage  npBlack" style="display: block;"><div class="hide"></div></div> -->
+         </div>
+        <div class="page-content messages-content">
+            <div class="messages messages-auto-layout chating">
+            <audio id="msg" src="audio/msg.wav" preload style="opacity: 0"></audio>
+                <div class="message message-received message-with-avatar message-last message-with-tail message-first">
+                    <div class="message-name">武汉理工大学党代会</div>
+                    <div class="message-text">我是武汉理工大学党代会</div>
+                    <div style="background-image:url(images/0000049.jpg)" class="message-avatar"></div>
+                </div>
+                <div class="messages-date">
+                  <span>以上是打招呼的内容</span>
+                </div>
+                <div class="messages-date">
+                  <span>你已经添加了武汉理工大学党代会，现在可以开始聊天了。</span>
+                </div>
+
+          </div>
+        </div>
+    </div>
+
+
+       <!-- 5.朋友圈  -->
+        <div class="page cached" data-page="friendCircle">
+          <div class="page-content">
+           <div class="friendZoom iscorllWraper">
+              <div class="fzTitle"><span>朋友圈</span></div>
+              <div class="fzHeader">
+                  <div class="fzHCover"></div>
+                  <div class="fzHLoad">
+                     <div class="fzHLoadName"><span>我</span></div>
+                     <div class="fzHLoadHeader"></div>
+                  </div>
+              </div>
+              <div class="fzDetail">
+                 <div class="fzDLine">
+                     <div class="clrF">
+                         <div class="fzDHeader"></div>
+                         <div class="fzDInfo">
+                            <div class="fzDName"><span>黑龙江新闻网</span></div>
+                            <div class="fzDText"><span>为奋力走出黑龙江全面振兴发展新路子而努力奋斗！继续加油！积极进取！<img src="images/wx013.png" class="faiEmjImg"><cursor class="cursorStart"></cursor></span></div>
+                            <div class="fzDImage"></div>
+                            <div class="fzDTime"><span>7分钟前</span><span class="fzDTimeIcon icon"></span></div>
+                            <div class="fzDComment">
+                                <div class="triangleIcon"></div>
+                                <div class="fzDCLike ">
+                                    <div class="fzDCLikeIcon icon"></div>
+                                    <div class="fzDCLikeArea"><span>生活报</span><span class="commaText">,&nbsp;</span></div>
+                                </div>
+                                <div class="fzDCComment ">
+                                    <div class="fzDCCArea">
+                                       <span class="fzDCCAreaSpan fzDCCAreaName">生活报</span>
+                                       <span class="fzDCCAreaSpan">回复</span>
+                                       <span class="fzDCCAreaName fzDCCAreaSpan">黑龙江日报</span>
+                                       <span class="fzDCCAreaSpan">:&nbsp;</span>
+                                       <span class="fzDCCAreaText fzDCCAreaSpan">一起<!-- <cursor class="cursorStart"></cursor> -->加油！</span>
+                                    </div>
+                                </div>
+                            </div>
+                          </div>
+                        </div>
+                 </div>
+              </div>
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+ </div>
+</div>
+
+                    <script src="js/jquery-2.1.4.js"></script>
+              <script src="js/jquery-weui.min.js"></script>
+       
+                  <!-- Path to Framework7 Library JS-->
+                  <script type="text/javascript" src="js/framework7.min.js"></script>
+                  <!-- Path to your app js-->
+                  <script type="text/javascript" src="js/ddh.js"></script>
+                </body>
+</html>              

@@ -1,0 +1,323 @@
+/*
+* @Author: zoe
+* @Date:   2017-09-24 16:39:54
+* @Last Modified by:   zoe
+* @Last Modified time: 2017-09-25 22:32:39
+*/
+.pagemobi{
+	visibility: visible;
+	width: 750px;
+	height: 100%;
+	max-height: 100%;
+	max-width: 100%;
+    position: relative;
+    margin: 0 auto;
+    background-color: #efeff4;
+    overflow: hidden;
+}
+.mypage{
+	position: absolute;
+	width: 750px;
+	height: 100%;
+	transition: 500ms;
+}
+
+/* 1.来电 */
+.phonecall,.online,.pagelock{
+	height: 100%;
+	position: absolute;
+	top: 0;
+	width: 100%;
+	background: url(../images/0000051.jpg) no-repeat center;
+	background-size:100% 100%;
+}
+.phoneHeader{
+	margin-top: 3.5rem;
+	font-size: 1.3rem;
+	color: #fff;
+	text-align: center;
+	z-index: 10;
+}
+.phoneName{
+	margin-top: 1rem;
+	font-weight: bold;
+	z-index: 10;
+}
+.phonePosition,.phoneTimecount{
+	margin-top: .8rem;
+	font-size: 1rem;
+	text-align: center;
+	 z-index: 2;
+/* 	font-weight: bold; */
+}
+.phoneMessage{
+	/* bottom: 10.8rem; */
+    width: 11rem;
+    height: 2.1rem;
+    background: url(../images/telegram3.png) no-repeat center;
+    background-size: cover;
+    margin: auto;
+    margin-top: 12rem;
+}
+.phoneFooter{
+    /* bottom: 3.8rem; */
+    width: 4.1rem;
+    height: 5.5rem;
+    background: url(../images/telegram2.png) no-repeat center;
+    background-size: cover;
+    margin: auto;
+    margin-top: 1rem;
+}
+
+/* 2.通话中 */
+.onlineMessage{
+	/* bottom: 11rem; */
+    width: 14.6rem;
+    height: 11.2rem;
+    left: 12%;
+    background: url(../images/voicecalls.png) no-repeat center;
+    background-size: cover;
+    margin: auto;
+    margin-top: 1rem;
+}
+.onlineFooter{
+    /* bottom: 4.5rem; */
+    width: 4rem;
+    height: 4rem;
+    background: url(../images/voicecalls2.png) no-repeat center;
+    background-size: cover;
+    margin: auto;
+    margin-top: 1rem;
+}
+
+/* 3.显示有条新消息 */
+.phoneTime{
+	font-size: 60px;
+}
+.phoneDate{
+	height: 2.8rem;
+}
+.lockedLine{
+	height: 1px;
+    background: rgba(255,255,255,.2);
+    margin-left: .34rem;
+}
+.pagelockMessage{
+    padding: .22rem .7rem .28rem .98rem;
+    position: relative;
+    font-family: 微软雅黑,'microsoft yahei',宋体,新宋体,sans-serif;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    box-sizing: border-box;
+    overflow: hidden;
+    color: #ffffff;
+    padding-left: 2rem;
+    /* margin-top: 1rem; */
+}
+.wechatIcon{
+	width: 1.5rem;
+	height: 1.5rem;
+	display: block;
+	position: absolute;
+	left: .3rem;
+	top: .3rem;
+}
+.plmcontent{
+    font-size: .32rem;
+    line-height: 1rem;
+    max-height: .96rem;
+    padding: 0;
+    font-family: 微软雅黑,'microsoft yahei',宋体,新宋体,sans-serif;
+    overflow: hidden;
+}
+.plmfooter{
+	margin-top: .06rem;
+    font-size: .24rem;
+    color: #59a1b9;
+}
+.pagelockFooter{
+	position: absolute;
+	bottom: 3rem;
+	/* width: 4rem; */
+	height: 2rem;
+	line-height: 2rem;
+	left: 40%;
+	color: rgba(1, 0, 0, .5);
+}
+
+
+/* 4.聊天页面 */
+ .messages-content {
+        background: rgb(235, 235, 235);
+    }
+.messages-date{
+    margin: .2rem auto;
+}
+    .messages-date > span {
+        display: inline-block;
+        color: #fff;
+        background: rgb(206, 206, 206);
+        padding: 0.4rem;
+        border-radius: 0.2rem;
+        font-size: 0.8rem;
+        margin: 0 1rem;
+    }
+    .message-received > .message-text {
+        background: gainsboro;
+    }
+    .message-sent > .message-text {
+        background: rgb(160, 231, 90);
+        color: #000;
+    }
+    .messagebar {
+        border-top: 1px solid rgb(221, 221, 221);
+        background: rgb(245, 245, 246);
+    }
+    .messagebar textarea {
+        border-color: rgb(221, 221, 221);
+        border-radius: 0.3rem;
+    }
+    .messages .message-avatar {
+        width: 45px;
+        height: 45px;
+        border-radius: 100%;
+        /* position: absolute; */
+        background-size: cover;
+        opacity: 1;
+        -webkit-transition-duration: .4s;
+        transition-duration: .4s;
+        margin-top: -2.2rem;
+    }
+    .message-received.message-last .message-text,.message-received.message-with-tail .message-text {
+        margin-left: 2.3rem;
+        border-radius: 16px 16px 16px 0;
+        padding: .5rem .2rem .1rem 1rem;
+         -webkit-mask-box-image: url("data:image/svg+xml;charset=utf-8,<svg height='35' viewBox='0 0 96 70' width='48' xmlns='http://www.w3.org/2000/svg'><path d='m96 35c1 7-5 37-42 35-37 2-43-28-42-35-1-7 5-37 42-35 37-2 43 28 42 35z'/><path d='m0 70c6-2 12-10 12-19v-16l14 27s-8 8-26 8z'/></svg>") 50% 42% 46% 56%
+    }
+    .message-sent.message-last .message-text,.message-sent.message-with-tail .message-text{
+    margin-right: 2.3rem;
+    background-color: #00d449;
+    color: #fff;
+    padding: .2rem .2rem .1rem 1rem;
+     -webkit-mask-box-image: url("data:image/svg+xml;charset=utf-8,<svg height='35' viewBox='0 0 96 70' width='48' xmlns='http://www.w3.org/2000/svg'><path d='m84 35c1 7-5 37-42 35-37 2-43-28-42-35-1-7 5-37 42-35 37-2 43 28 42 35z'/><path d='m96 70c-6-2-12-10-12-19v-16l-14 27s8 8 26 8z'/></svg>") 50% 56% 46% 42%
+}
+    .message-received.message-with-avatar .message-name {
+        margin-left: 3rem;
+    }
+    .message-sent.message-with-avatar .message-name {
+        margin-right: 3rem;
+    }
+    .mask {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.75);
+        display: none;
+        z-index: 9999;
+    }
+    .mask > img {
+        position: fixed;
+        top: 0;
+        right: 0;
+    }
+    .slideNextPage.npBlack div{
+        background-image: url(../images/nextPageBlack.png);
+    }
+
+
+/* 音频 */
+.callWaiting,.someonetalk,.callStop,.notification{
+	display: none;
+}
+
+
+
+/* 显示隐藏 */
+ .show{
+	display: block;
+} 
+ .hide{
+	display: none;
+} 
+
+
+/* 圆圈由小变大向外扩散 */
+@keyframes warn {  
+    0% {  
+        transform: scale(0);  
+        opacity: 0.0;  
+    }  
+    25% {  
+        transform: scale(0);  
+        opacity: 0.1;  
+    }  
+    50% {  
+        transform: scale(0.1);  
+        opacity: 0.3;  
+    }  
+    75% {  
+        transform: scale(0.5);  
+        opacity: 0.5;  
+    }  
+    100% {  
+        transform: scale(1);  
+        opacity: 0.0;  
+    }  
+}  
+@-webkit-keyframes "warn" {  
+    0% {  
+        -webkit-transform: scale(0);  
+        opacity: 0.0;  
+    }  
+    25% {  
+        -webkit-transform: scale(0);  
+        opacity: 0.1;  
+    }  
+    50% {  
+        -webkit-transform: scale(0.1);  
+        opacity: 0.3;  
+    }  
+    75% {  
+        -webkit-transform: scale(0.5);  
+        opacity: 0.5;  
+    }  
+    100% {  
+        -webkit-transform: scale(1);  
+        opacity: 0.0;  
+    }  
+}  
+  
+/* 保持大小不变的小圆圈  */  
+.dot {
+    position: absolute;
+    width: .5rem;
+    height: .5rem;
+    left: 1.2rem;
+    top: .6rem;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    border: 2px solid rgba(255,255,255,.2);
+    border-radius: 20px;
+    /* z-index: 2; */
+}  
+/* 产生动画（向外扩散变大）的圆圈  */  
+.pulse {
+    position: absolute;
+    width: 2rem;
+    height: 2rem;
+    left: .3rem;
+    top: -.3rem;
+    border: 6px solid #fff;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    border-radius: 30px;
+    /* z-index: 1; */
+    opacity: 0;
+    -webkit-animation: warn 3s ease-out;
+    -moz-animation: warn 3s ease-out;
+    animation: warn 3s ease-out;
+    -webkit-animation-iteration-count: infinite;
+    -moz-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+}  
