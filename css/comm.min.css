@@ -5157,12 +5157,12 @@ input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
 
 .friendZoom {
 	width: 100%;
-	height: 100%;
+	/* height: 100%; */
 	position: absolute;
 	top: 0;
 	left: 0;
 	overflow: hidden;
-	background-color: #fff
+	background-color: #fff;
 }
 
 .friendZoom::-webkit-scrollbar {
@@ -5240,9 +5240,9 @@ input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
 	position: relative;
 	width: 100%;
 	margin-top: .3rem;
-	padding: 0 .23rem .3rem .23rem;
+	padding: .5rem .9rem .9rem .5rem;
 	font-size: .3rem;
-	box-sizing: border-box
+	box-sizing: border-box;
 }
 
 .fzDetail .fzDLine:last-child {
@@ -5259,9 +5259,10 @@ input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
 }
 
 .fzDInfo {
-	width: 15rem;
-	float: left;
-	position: relative
+	/* width: 15rem; */
+	/* float: left; */
+	position: relative;
+	margin-left: 2rem;
 }
 
 .fzDInfo .fzDName {
@@ -5423,11 +5424,11 @@ input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
 
 .fzDComment {
 	position: relative;
-	float: right;
-	width: 15rem;
+	/* float: right; */
+	/* width: 15rem; */
 	background-color: #f3f3f5;
 	color: #000;
-	margin-top: .3rem
+	margin-top: .3rem;
 }
 
 .triangleIcon {

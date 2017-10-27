@@ -9,7 +9,7 @@
                   <!-- Your app title -->
                   <title>党代会</title>
                   <!-- Path to Framework7 iOS CSS theme styles-->
-               <link rel="stylesheet" href="css/weui.min.css">
+                  <link rel="stylesheet" href="css/weui.min.css">
                   <link rel="stylesheet" href="css/jquery-weui.min.css">
 
                   <!-- <link rel="stylesheet" href="css/flyer.min.css"> -->
@@ -19,7 +19,8 @@
                   <!-- Path to your custom app styles-->
                   <link rel="stylesheet" href="css/comm.min.css">
                   <link rel="stylesheet" href="css/ddh.css">
-                   <link rel="stylesheet" type="text/css" href="css/reset.css" />   
+                  <link rel="stylesheet" type="text/css" href="css/reset.css" />
+
   
                 </head>
                 <body>
@@ -88,7 +89,7 @@
       </div>
       <div class="lockedLine"></div>
       <div class="pagelockFooter">
-          <span>点击解锁</span>
+          <!-- <span>点击解锁</span> -->
           <div class="dot"></div>  
                 <div class="pulse"></div>
             </div>
@@ -120,6 +121,11 @@
                 </div>
 
           </div>
+           <div class="messagesFooter hide">
+          <!-- <span>点击查看朋友圈</span> -->
+          <div class="dot"></div>  
+                <div class="pulse"></div>
+            </div>
         </div>
     </div>
 
@@ -127,7 +133,7 @@
        <!-- 5.朋友圈  -->
         <div class="page cached" data-page="friendCircle">
           <div class="page-content">
-           <div class="friendZoom iscorllWraper">
+           <div class="friendZoom">
               <div class="fzTitle"><span>朋友圈</span></div>
               <div class="fzHeader">
                   <div class="fzHCover"></div>
@@ -137,33 +143,40 @@
                   </div>
               </div>
               <div class="fzDetail">
-                 <div class="fzDLine">
+               <script src="js/template7.js"></script>   
+               <script id="template" type="text/template7">
+             {{#each friendArr}}
+                <div class="fzDLine">
                      <div class="clrF">
                          <div class="fzDHeader"></div>
                          <div class="fzDInfo">
-                            <div class="fzDName"><span>黑龙江新闻网</span></div>
-                            <div class="fzDText"><span>为奋力走出黑龙江全面振兴发展新路子而努力奋斗！继续加油！积极进取！<img src="images/wx013.png" class="faiEmjImg"><cursor class="cursorStart"></cursor></span></div>
+                            <div class="fzDName"><span>{{fzDName}}</span></div>
+                            <div class="fzDText"><span>{{fzDText}}<cursor class="cursorStart"></cursor></span></div>
                             <div class="fzDImage"></div>
-                            <div class="fzDTime"><span>7分钟前</span><span class="fzDTimeIcon icon"></span></div>
+                            <div class="fzDTime"><span>{{fzDTime}}</span><span class="fzDTimeIcon icon"></span></div>
                             <div class="fzDComment">
                                 <div class="triangleIcon"></div>
                                 <div class="fzDCLike ">
                                     <div class="fzDCLikeIcon icon"></div>
-                                    <div class="fzDCLikeArea"><span>生活报</span><span class="commaText">,&nbsp;</span></div>
+                                    <div class="fzDCLikeArea"><span>{{join fzDCLikeArea delimiter=,}}</span></div>
                                 </div>
                                 <div class="fzDCComment ">
+                                {{#each fzDCCArea}}
                                     <div class="fzDCCArea">
-                                       <span class="fzDCCAreaSpan fzDCCAreaName">生活报</span>
+                                       <span class="fzDCCAreaSpan fzDCCAreaName">{{fzDCCAreaName1}}</span>
                                        <span class="fzDCCAreaSpan">回复</span>
-                                       <span class="fzDCCAreaName fzDCCAreaSpan">黑龙江日报</span>
+                                       <span class="fzDCCAreaName fzDCCAreaSpan">{{fzDCCAreaName2}}</span>
                                        <span class="fzDCCAreaSpan">:&nbsp;</span>
-                                       <span class="fzDCCAreaText fzDCCAreaSpan">一起<!-- <cursor class="cursorStart"></cursor> -->加油！</span>
+                                       <span class="fzDCCAreaText fzDCCAreaSpan">{{fzDCCAreaText}}</span>
                                     </div>
+                                {{/each}}    
                                 </div>
                             </div>
                           </div>
                         </div>
-                 </div>
+                 </div> 
+              {{/each}}    
+              </script>
               </div>
 
           </div>
@@ -179,6 +192,7 @@
        
                   <!-- Path to Framework7 Library JS-->
                   <script type="text/javascript" src="js/framework7.min.js"></script>
+                 
                   <!-- Path to your app js-->
                   <script type="text/javascript" src="js/ddh.js"></script>
                 </body>

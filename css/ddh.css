@@ -2,7 +2,7 @@
 * @Author: zoe
 * @Date:   2017-09-24 16:39:54
 * @Last Modified by:   zoe
-* @Last Modified time: 2017-09-25 22:32:39
+* @Last Modified time: 2017-10-12 17:51:21
 */
 .pagemobi{
 	visibility: visible;
@@ -134,14 +134,16 @@
     font-size: .24rem;
     color: #59a1b9;
 }
-.pagelockFooter{
-	position: absolute;
-	bottom: 3rem;
-	/* width: 4rem; */
+.pagelockFooter,.messagesFooter{
+	position: fixed;
+	/* margin: 0 auto; */
+	width: 4rem;
 	height: 2rem;
 	line-height: 2rem;
-	left: 40%;
+	text-align: center;
 	color: rgba(1, 0, 0, .5);
+	bottom: 2.4rem;
+	left: 40%;
 }
 
 
@@ -226,6 +228,36 @@
     }
 
 
+
+/* 5.朋友圈 */
+.fzDetail .fzDLine{
+    padding: .5rem .9rem .9rem .5rem;
+}
+.fzDInfo {
+    /* width: 15rem; */
+    /* float: left; */
+    position: relative;
+    margin-left: 2rem;
+}
+.fzDComment{
+    position: relative;
+    /* float: right; */
+    /* width: 15rem; */
+    background-color: #f3f3f5;
+    color: #000;
+    margin-top: .3rem;
+}
+.friendZoom {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    background-color: #fff;
+}
+
+
 /* 音频 */
 .callWaiting,.someonetalk,.callStop,.notification{
 	display: none;
@@ -293,31 +325,41 @@
     position: absolute;
     width: .5rem;
     height: .5rem;
-    left: 1.2rem;
+    left: 1.5rem;
     top: .6rem;
     -webkit-border-radius: 20px;
     -moz-border-radius: 20px;
-    border: 2px solid rgba(255,255,255,.2);
     border-radius: 20px;
     /* z-index: 2; */
 }  
+.pagelockFooter .dot{
+    border: 2px solid rgba(255, 255, 255,0.4);  
+}
+.messagesFooter .dot{
+    border: 2px solid rgba(133, 133, 133,0.4);  
+}
 /* 产生动画（向外扩散变大）的圆圈  */  
 .pulse {
     position: absolute;
     width: 2rem;
     height: 2rem;
-    left: .3rem;
+    left: .6rem;
     top: -.3rem;
-    border: 6px solid #fff;
     -webkit-border-radius: 30px;
     -moz-border-radius: 30px;
     border-radius: 30px;
     /* z-index: 1; */
     opacity: 0;
-    -webkit-animation: warn 3s ease-out;
-    -moz-animation: warn 3s ease-out;
-    animation: warn 3s ease-out;
+    -webkit-animation: warn 2s ease-out;
+    -moz-animation: warn 2s ease-out;
+    animation: warn 2s ease-out;
     -webkit-animation-iteration-count: infinite;
     -moz-animation-iteration-count: infinite;
     animation-iteration-count: infinite;
 }  
+.pagelockFooter .pulse{
+    border: 6px solid #fff;
+}
+.messagesFooter .pulse{
+    border: 6px solid gray;  
+}
